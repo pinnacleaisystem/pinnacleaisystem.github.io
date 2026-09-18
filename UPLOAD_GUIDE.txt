@@ -1,0 +1,9 @@
+Pinnacle AI量化投資系統網站上傳說明
+
+1. 解壓縮後，將本資料夾內的全部檔案上傳到 pinnacleaisystem.github.io 儲存庫根目錄。
+2. 將準備好的圖片放入 images 資料夾，檔名必須與 images/README.txt 中的清單一致。
+3. 在 GitHub 儲存庫開啟 Settings → Pages。
+4. Source 選擇 Deploy from a branch，分支選擇 main，資料夾選擇 /(root)。
+5. 儲存後等待網站發布，網址為 https://pinnacleaisystem.github.io/
+
+網站已包含 robots.txt、sitemap.xml、canonical網址、手機版版面與文章內部連結。

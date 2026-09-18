@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pinnacleaisystem.github.io/sitemap.xml

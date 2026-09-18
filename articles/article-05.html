@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pinnacle AI量化投資系統如何建立可靠的資料基礎？</title><meta name="description" content="說明Pinnacle AI量化投資系統如何進行資料清洗、時間校準、頻率統一與品質檢查。"><link rel="canonical" href="https://pinnacleaisystem.github.io/articles/article-05.html"><link rel="icon" type="image/png" href="../images/LOGO-2.png"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip-link" href="#main">跳至主要內容</a><header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><img class="brand-logo" src="../images/LOGO.png" alt="Pinnacle AI標誌"><span class="brand-logo-fallback"></span><span class="brand-name"><span>Pinnacle AI 系統</span><small>QUANTITATIVE INTELLIGENCE</small></span></a><button class="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false">☰</button><nav class="nav-links"><a href="../index.html">首頁</a><a href="../about.html">關於系統</a><a href="../faq.html">常見問題</a><a href="../insights.html" aria-current="page">洞察文章</a></nav></div></header>
+<main id="main" class="article"><div class="container article-wrap"><article><header class="article-header"><div class="breadcrumb"><a href="../index.html">首頁</a> / <a href="../insights.html">洞察文章</a> / 資料工程</div><p class="eyebrow">DATA ENGINEERING</p><h1>Pinnacle AI量化投資系統如何建立可靠的資料基礎？</h1><div class="meta">研究專題 · 約8分鐘閱讀</div></header><div class="article-cover"><div class="media"><img src="../images/5.png" alt="Pinnacle AI量化投資系統資料工程示意圖" data-fallback></div></div><div class="article-body">
+<p>在AI量化研究中，模型通常最受關注，但真正決定研究品質的往往是資料。若行情時間錯位、新聞事件標記不一致，或不同資產的資料頻率未經處理，模型可能學到不存在的關係。Pinnacle AI量化投資系統因此把資料工程放在研發前端，先確認輸入內容可靠，再討論模型複雜度。</p>
+<h2>資料多，不代表資料可以直接使用</h2>
+<p>金融資料具有來源多、速度快、格式不同的特性。同一項資產可能同時存在日線、分鐘、逐筆與衍生指標；新聞資訊則包含發布時間、更新時間、事件主體與語意分類。若直接把資料放進模型，時間差與欄位差異可能被誤認為訊號。</p>
+<p>因此，資料接入後需要先建立來源紀錄，確認資料由何處取得、涵蓋期間、更新頻率與可能缺漏。資料量再大，如果無法追溯來源與處理過程，就難以支持後續驗證。</p>
+<h2>清洗與異常值處理</h2>
+<p>價格資料可能因交易暫停、報價錯誤、公司行動或市場制度而出現異常。新聞文字也可能重複發布、修正內容或引用相同事件。Pinnacle AI 系統的資料流程需要辨識這些狀況，並依研究目的決定修正、保留或標記，而不是單純刪除所有極端值。</p>
+<p>極端值有時是資料錯誤，有時卻是真實市場事件。若不加判斷地移除，可能失去最重要的風險資訊；若全部保留，又可能讓錯誤資料扭曲模型。合理做法是保留處理紀錄，讓研究人員知道每項資料經過哪些改動。</p>
+<h2>時間軸校準的重要性</h2>
+<p>量化研究尤其重視「當時是否已經知道這項資訊」。例如新聞後來更新內容，不能在回測時把更新後資訊放回原始發布時點；財務資料也應依實際公開時間，而不是報表涵蓋期間進行對齊。若忽略這點，就可能產生前視偏誤，讓歷史結果看起來過度理想。</p>
+<p>不同市場存在時區、休市與交易時段差異，跨資產研究更需要統一時間標準。時間軸校準能協助系統正確比較事件與行情反應，避免把先後順序顛倒。</p>
+<h2>頻率統一與資料結構</h2>
+<p>當系統同時分析日線行情、即時指標與文字事件時，需要明確規定各類資料如何聚合。高頻資料不應任意塞入低頻策略，低頻事件也不能被重複計算。透過頻率統一與欄位標準化，研究團隊可以更清楚地比較不同資料組合。</p>
+<p>標準化結構也有助於模型版本管理。當資料格式一致，每次研究就能使用相同規則重現，並比較新舊模型差異。若每次測試都以不同方式整理資料，結果即使改變，也難以判斷原因。</p>
+<h2>資料品質需要持續監測</h2>
+<p>資料工程不是一次完成的工作。來源可能改版、欄位定義可能更新，市場制度也會改變。Pinnacle AI量化投資系統需要持續檢查缺漏率、延遲、數值分布與欄位一致性，當資料特徵明顯偏離時，應先暫停依賴相關訊號並確認原因。</p>
+<p>可靠資料基礎的價值，在於讓模型結果可理解、可追溯，也讓錯誤更容易被定位。好的資料工程不會保證策略獲利，卻能降低因資料問題造成錯誤結論的機率，這也是量化研究最重要、但常被忽略的基本功。</p>
+<div class="notice">資料品質能改善研究可信度，但不能消除市場風險。任何模型結果仍需要搭配假設、限制與情境進行理解。</div></div></article><aside class="article-aside"><strong>延伸閱讀</strong><a href="article-03.html">研發體系如何建立</a><a href="article-07.html">理解新聞與多源資訊</a><a href="article-08.html">使用者應注意哪些重點</a><a href="../faq.html">常見問題</a></aside></div></main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><strong>Pinnacle AI量化投資系統</strong><p>內容僅供系統研究與知識說明，不構成投資建議。</p></div><nav class="footer-links"><a href="../index.html">首頁</a><a href="../about.html">關於系統</a><a href="../insights.html">洞察文章</a></nav></div><div class="footer-bottom">© 2026 Pinnacle AI 系統。</div></div></footer><script src="../assets/site.js"></script></body></html>
